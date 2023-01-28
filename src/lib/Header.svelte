@@ -48,6 +48,8 @@
         flex-direction: row;
 
         border-bottom: 1px solid var(--line);
+
+        background-color: var(--background);
     }
 
     div.left {

@@ -4,7 +4,15 @@
     import Header from "../lib/Header.svelte";
 </script>
 
-<Header --padding="0 10vw" />
+<Header />
 <main>
     <slot />
 </main>
+
+
+<style>
+    main {
+        padding: var(--padding);
+        padding-top: 83px;
+    }
+</style>

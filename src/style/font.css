@@ -49,6 +49,27 @@ h6 {
     font-weight: 600;
 }
 
+.text {
+    color: var(--text);
+}
+
+.text-link:hover {
+    cursor: pointer;
+    color: var(--text-accent);
+}
+
+.text-extend {
+    color: var(--text-extend);
+}
+
+.text-accent {
+    color: var(--text-accent);
+}
+
+.text-accent-gray {
+    color: var(--text-accent-gray);
+}
+
 .dot {
     line-height: 0;
 }

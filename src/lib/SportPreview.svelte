@@ -1,8 +1,12 @@
 <script>
+    import { addEllipsis } from "$lib/utils/textUtils.js";
+
     export let title;
     export let text;
     export let href;
     export let imgURL;
+
+    text = addEllipsis(text, 80);
 </script>
 
 <div
@@ -21,6 +25,8 @@
 
 <style>
     div.container {
+        height: 30rem;
+
         display: flex;
         align-items: flex-end;
 
@@ -30,6 +36,8 @@
     }
 
     div.heading {
+        max-width: 30vw;
+        
         display: flex;
         align-items: flex-start;
         flex-direction: column;

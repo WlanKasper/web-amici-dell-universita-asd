@@ -1,0 +1,14 @@
+:root {
+    --text: #111111;
+    --text-extend: #FFFFFF;
+    --text-accent: #F27215;
+    --text-accent-gray: #BBBBBB;
+
+    --background: #FFFFFF;
+    --background-accent: #F27215;
+
+    --line: #111111;
+    --line-extend: #BBBBBB;
+
+    --padding: 0 10vw;
+}
