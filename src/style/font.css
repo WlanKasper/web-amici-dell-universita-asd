@@ -1,0 +1,91 @@
+/* Todo: check which way is faster to load font */
+/* @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); */
+
+@font-face {
+    font-family: "Devanagari Sangam MN";
+    src: url("/font/devanagari-sangam-mn.ttf");
+}
+
+@font-face {
+    font-family: "Devanagari Sangam MN Bold";
+    src: url("/font/devanagari-sangam-mn-bold.ttf");
+}
+
+*:not(br):not(hr):not(img) {
+    font-family: "Devanagari Sangam MN", sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-size: 34px;
+    line-height: 50px;
+}
+
+h3 {
+    /* font-size: 42px; */
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+h5 {
+    font-size: 28px;
+    line-height: 45px;
+}
+
+h6 {
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.text-heading {
+    font-family: "Devanagari Sangam MN Bold", sans-serif;
+    font-weight: 600;
+}
+
+.dot {
+    line-height: 0;
+}
+
+.dot-max {
+    font-size: 80px;
+}
+
+.dot-mid {
+    font-size: 60px;
+}
+
+.dot-min {
+    font-size: 40px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 1140px) {
+    h1 {
+    }
+
+    h2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    h3 {
+    }
+
+    h4 {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    h5 {
+    }
+
+    h6 {
+
+    }
+}
