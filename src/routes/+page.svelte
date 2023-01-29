@@ -1,19 +1,23 @@
 <script>
-    import NewsPreview from "$lib/NewsPreview.svelte";
-    import SportPreview from "$lib/SportPreview.svelte";
+    import NewsPreview from "$lib/components/NewsPreview.svelte";
+    import SportPreview from "$lib/components/SportPreview.svelte";
 
     export let data;
 
-    const sportPreview4 = data.sportSection.slice(0, 4);
-    const sportPreviewAll = data.sportSection.slice(4);
+    const sportPreview = {
+        heading: data.sportSection.slice(0, 4),
+        all: data.sportSection.slice(4),
+    };
 
-    const newsPreview4 = data.newsSection.slice(0, 4);
-    const newsPreviewAll = data.newsSection.slice(4);
+    const newsPreview = {
+        heading: data.newsSection.slice(0, 4),
+        all: data.newsSection.slice(4),
+    };
 </script>
 
 <div class="container">
     <section class="sport-preview">
-        {#each sportPreview4 as sport}
+        {#each sportPreview.heading as sport}
             <SportPreview
                 title={sport.title}
                 text={sport.description}
@@ -23,7 +27,7 @@
         {/each}
     </section>
     <section class="news-preview">
-        {#each newsPreview4 as news}
+        {#each newsPreview.heading as news}
             <NewsPreview
                 title={news.sportSection.title}
                 date={news.date}
@@ -33,7 +37,7 @@
         {/each}
     </section>
     <section class="sport-preview">
-        {#each sportPreviewAll as sport}
+        {#each sportPreview.all as sport}
             <SportPreview
                 title={sport.title}
                 text={sport.description}
@@ -43,7 +47,7 @@
         {/each}
     </section>
     <section class="news-preview">
-        {#each newsPreviewAll as news}
+        {#each newsPreview.all as news}
             <NewsPreview
                 title={news.sportSection.title}
                 date={news.date}
