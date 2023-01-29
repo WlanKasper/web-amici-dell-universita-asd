@@ -47,7 +47,7 @@
         justify-content: space-between;
         flex-direction: row;
 
-        border-bottom: 1px solid var(--line);
+        /* border-bottom: 1px solid var(--line); */
 
         background-color: var(--background);
     }
