@@ -41,7 +41,7 @@
             <SportPreview
                 title={sport.title}
                 text={sport.description}
-                href="/"
+                href="/sport/{sport.sys.id}"
                 imgURL={sport.imageHero.url}
             />
         {/each}
@@ -52,7 +52,7 @@
                 title={news.sportSection.title}
                 date={news.date}
                 text={news.text.json.content[0].content[0].value}
-                href="/"
+                href="/news/{news.sys.id}"
             />
         {/each}
     </section>
@@ -61,7 +61,7 @@
             <SportPreview
                 title={sport.title}
                 text={sport.description}
-                href="/"
+                href="/sport/{sport.sys.id}"
                 imgURL={sport.imageHero.url}
             />
         {/each}
@@ -72,7 +72,7 @@
                 title={news.sportSection.title}
                 date={news.date}
                 text={news.text.json.content[0].content[0].value}
-                href="/"
+                href="/news/{news.sys.id}"
             />
         {/each}
     </section>

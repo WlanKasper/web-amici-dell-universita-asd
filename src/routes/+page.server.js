@@ -4,6 +4,9 @@ const query = `
 {
   sportSectionCollection {
     items {
+      sys {
+        id
+      }
       title
       description
       imageHero {
@@ -13,6 +16,9 @@ const query = `
 	}
   newsSectionCollection {
     items {
+      sys {
+        id
+      }
       sportSection {
         title
       }
