@@ -138,8 +138,6 @@
         align-items: center;
         justify-content: center;
 
-        margin: 3vh 0;
-
         cursor: pointer;
 
         background-color: var(--background-accent);

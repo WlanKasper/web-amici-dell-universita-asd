@@ -61,6 +61,7 @@
         justify-content: space-between;
         flex-direction: column;
 
+        margin-top: 20vh;
         padding: var(--padding);
         border-top: 1px solid var(--line);
     }
@@ -86,7 +87,7 @@
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         div.container {
             width: 90vw;
-            
+
             margin-bottom: 3vh;
 
             flex-direction: column;
