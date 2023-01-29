@@ -48,9 +48,9 @@
 
     @media screen and (min-width: 1px) and (max-width: 600px) {
         div.heading {
-            gap: 2px;
-
+            max-width: 40vw;
             padding: 18px 10px;
+            gap: 2px;
         }
     }
 </style>

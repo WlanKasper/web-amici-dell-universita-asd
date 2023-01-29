@@ -9,6 +9,15 @@
 
     --line: #111111;
     --line-extend: #BBBBBB;
+}
 
+:root {
     --padding: 0 10vw;
+}
+
+@media screen and (min-width: 100px) and (max-width: 1140px) {
+    :root {
+        --padding: 0;
+        --padding-section: 0 5vw;
+    }
 }

@@ -71,9 +71,25 @@
         gap: 0.25rem;
     }
 
+    @media screen and (min-width: 100px) and (max-width: 1140px) {
+        section.sport-preview {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.125rem;
+        }
+    }
+
     section.news-preview {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 5rem 0;
+    }
+
+    @media screen and (min-width: 100px) and (max-width: 1140px) {
+        section.news-preview  {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+
+            padding: var(--padding-section);
+        }
     }
 </style>
