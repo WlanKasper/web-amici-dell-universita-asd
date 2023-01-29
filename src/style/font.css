@@ -1,18 +1,15 @@
-/* Todo: check which way is faster to load font */
-/* @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); */
-
 @font-face {
-    font-family: "Devanagari Sangam MN";
-    src: url("/font/devanagari-sangam-mn.ttf");
+    font-family: "Rajdhani";
+    src: url("/font/Rajdhani-Light.ttf");
 }
 
 @font-face {
-    font-family: "Devanagari Sangam MN Bold";
-    src: url("/font/devanagari-sangam-mn-bold.ttf");
+    font-family: "Rajdhani Bold";
+    src: url("/font/Rajdhani-SemiBold.ttf");
 }
 
 *:not(br):not(hr):not(img) {
-    font-family: "Devanagari Sangam MN", sans-serif;
+    font-family: "Rajdhani", sans-serif;
     font-weight: 400;
 }
 
@@ -45,7 +42,7 @@ h6 {
 }
 
 .text-heading {
-    font-family: "Devanagari Sangam MN Bold", sans-serif;
+    font-family: "Rajdhani Bold", sans-serif;
     font-weight: 600;
 }
 
