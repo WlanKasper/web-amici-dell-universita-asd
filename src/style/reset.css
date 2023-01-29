@@ -132,3 +132,7 @@ a {
     all: unset;
     cursor: pointer;
 }
+
+button {
+    all: unset;
+}
