@@ -3,9 +3,11 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --open",
 		"build": "vite build",
-		"preview": "vite preview"
+		"package": "svelte-kit package",
+		"preview": "vite preview",
+		"setup": "node ./contentful/setup.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^1.0.0",
@@ -16,6 +18,8 @@
 	"type": "module",
 	"dependencies": {
 		"contentful": "^9.3.0",
+		"contentful-import": "^8.5.24",
+		"dotenv": "^16.0.3",
 		"marked": "^4.2.12"
 	}
 }

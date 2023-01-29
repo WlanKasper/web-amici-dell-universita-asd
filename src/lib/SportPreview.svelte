@@ -1,5 +1,5 @@
 <script>
-    import { addEllipsis } from "$lib/utils/textUtils.js";
+    import { addEllipsis } from "$lib/utils/util-text.js";
 
     export let title;
     export let text;

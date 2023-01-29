@@ -1,15 +1,18 @@
 <script>
+    import { format } from "$lib/utils/util-date.js";
     export let title;
-    export let date;
+    export let date = format(date);
     export let text;
     export let href;
+
+    const ftmDate = format(new Date(date));
 </script>
 
 <div class="container">
     <div class="heading">
         <h2 class="text text-heading">{title}</h2>
         <div class="line-split" />
-        <h4 class="text">{date}</h4>
+        <h4 class="text">{ftmDate}</h4>
     </div>
     <div class="description">
         <h4 class="text text-link">
