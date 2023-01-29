@@ -1,11 +1,14 @@
 <script>
     import { format } from "$lib/utils/util-date.js";
+    import { addEllipsis } from "$lib/utils/util-text.js";
+
     export let title;
-    export let date = format(date);
+    export let date;
     export let text;
     export let href;
 
     const ftmDate = format(new Date(date));
+    const ftmText = addEllipsis(text, 364);
 </script>
 
 <div class="container">
@@ -17,7 +20,7 @@
     <div class="description">
         <h4 class="text text-link">
             <a {href}>
-                {text}
+                {ftmText}
             </a>
         </h4>
     </div>
@@ -30,7 +33,7 @@
 
         display: flex;
         align-items: stretch;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-direction: column;
     }
 

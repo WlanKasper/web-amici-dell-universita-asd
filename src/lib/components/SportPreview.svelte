@@ -35,9 +35,15 @@
         background-size: cover;
     }
 
+    @media screen and (min-width: 1px) and (max-width: 600px) {
+        div.container {
+            height: 20rem;
+        }
+    }
+
     div.heading {
         max-width: 30vw;
-        
+
         display: flex;
         align-items: flex-start;
         flex-direction: column;

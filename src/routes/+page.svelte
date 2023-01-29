@@ -51,7 +51,7 @@
             <NewsPreview
                 title={news.sportSection.title}
                 date={news.date}
-                text="This is a sport game for cool persons how realy loves to enjoy playing something"
+                text={news.text.json.content[0].content[0].value}
                 href="/"
             />
         {/each}
@@ -71,7 +71,7 @@
             <NewsPreview
                 title={news.sportSection.title}
                 date={news.date}
-                text="This is a sport game for cool persons how realy loves to enjoy playing something"
+                text={news.text.json.content[0].content[0].value}
                 href="/"
             />
         {/each}

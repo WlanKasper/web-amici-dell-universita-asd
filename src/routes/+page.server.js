@@ -17,7 +17,16 @@ const query = `
         title
       }
       date
-		}
+      text {
+        json
+      }
+      imagesFilesCollection(limit: 10) {
+        items {
+          title
+          url
+        }
+      }
+    }
   }
 }
 `;
