@@ -37,7 +37,9 @@
                 </h4>
             </section>
             <section id="photo">
-                <h2 class="text text-heading text-accent">Photo</h2>
+                {#if props.photo.collection.length > 0}
+                    <h2 class="text text-heading text-accent">Photo</h2>
+                {/if}
                 <div class="photo-container">
                     {#each props.photo.collection as photo}
                         <div
@@ -142,14 +144,14 @@
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         div.photo {
-        width: 40vw;
-        height: 15vh;
+            width: 40vw;
+            height: 15vh;
 
-        border-radius: 4px;
+            border-radius: 4px;
 
-        background-position: center;
-        background-size: cover;
-    }
+            background-position: center;
+            background-size: cover;
+        }
     }
 
     section#news {
