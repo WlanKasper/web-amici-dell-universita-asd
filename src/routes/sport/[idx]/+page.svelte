@@ -21,8 +21,10 @@
 <section>
     <div
         class="heading"
-        style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%), url({props
-            .sport.url});"
+        style="background-image:
+            linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%),
+            url({props.sport.url})
+        ;"
     >
         <h1 class="text text-heading text-extend">
             {props.sport.title}
