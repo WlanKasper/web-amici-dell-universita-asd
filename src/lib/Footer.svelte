@@ -25,13 +25,13 @@
             </h6>
         </div>
         <div class="cookie">
+            <h2 class="text text-heading">Cookie Policy</h2>
             <img
                 class="link link-icon"
                 src="/images/icon-link.svg"
                 alt="icon link to the Cookie policy"
                 srcset=""
             />
-            <h2 class="text text-heading">Cookie Policy</h2>
         </div>
         <div class="contacts">
             <h2 class="text text-heading">Contatti</h2>
@@ -133,10 +133,6 @@
         align-items: center;
         flex-direction: row;
         gap: 20px;
-    }
-
-    .text-heading {
-        margin-right: 20px;
     }
 
     img.link-fb {
