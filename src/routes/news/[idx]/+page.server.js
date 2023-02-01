@@ -22,6 +22,7 @@ const load = async (context) => {
                 text {
                     json
                 }
+                title
                 imagesFilesCollection(limit: 10) {
                     items {
                         title

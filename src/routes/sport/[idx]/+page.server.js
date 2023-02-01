@@ -43,7 +43,7 @@ const load = async (context) => {
                   id_contains_all: "photo${sportSectionCollection.items[0].title.replaceAll(' ', '')}"
                 }
               }
-            })
+            },limit: 6)
           {
             items {
               url

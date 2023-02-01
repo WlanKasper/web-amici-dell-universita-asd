@@ -19,9 +19,7 @@ const query = `
       sys {
         id
       }
-      sportSection {
-        title
-      }
+      title
       date
       text {
         json

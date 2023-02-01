@@ -16,6 +16,8 @@
         gap: 6,
     };
 
+    console.log(data);
+
     let count = 0;
 
     const heandlerClickShow = () => {
@@ -49,7 +51,7 @@
     <section class="news-preview">
         {#each newsPreview.heading as news}
             <NewsPreview
-                title={news.sportSection.title}
+                title={news.title}
                 date={news.date}
                 text={news.text.json.content[0].content[0].value}
                 href="/news/{news.sys.id}"
@@ -69,7 +71,7 @@
     <section class="news-preview">
         {#each newsPreview.all as news}
             <NewsPreview
-                title={news.sportSection.title}
+                title={news.title}
                 date={news.date}
                 text={news.text.json.content[0].content[0].value}
                 href="/news/{news.sys.id}"
