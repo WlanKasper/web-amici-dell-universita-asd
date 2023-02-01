@@ -6,18 +6,22 @@
         <div class="links">
             <div class="heading">
                 <h2 class="text text-heading">Links</h2>
-                <img
-                    class="link link-fb"
-                    src="/images/icon-facebook.svg"
-                    alt="icon link to facebook page"
-                    srcset=""
-                />
-                <img
-                    class="link link-units"
-                    src="/images/logo-units.svg"
-                    alt="icon link to UniTS (universita di Trieste)"
-                    srcset=""
-                />
+                <a href="https://www.facebook.com/crutsport">
+                    <img
+                        class="link link-fb"
+                        src="/images/icon-facebook.svg"
+                        alt="icon link to facebook page"
+                        srcset=""
+                    />
+                </a>
+                <a href="https://www.units.it/">
+                    <img
+                        class="link link-units"
+                        src="/images/logo-units.svg"
+                        alt="icon link to UniTS (universita di Trieste)"
+                        srcset=""
+                    />
+                </a>
             </div>
             <h6 class="text">
                 Amici dell'universita A.S.D (Associazione Sportiva
@@ -25,13 +29,15 @@
             </h6>
         </div>
         <div class="cookie">
-            <h2 class="text text-heading">Cookie Policy</h2>
-            <img
-                class="link link-icon"
-                src="/images/icon-link.svg"
-                alt="icon link to the Cookie policy"
-                srcset=""
-            />
+            <a class="cookie-inner" href="https://www.units.it/cookie">
+                <img
+                    class="link link-icon"
+                    src="/images/icon-link.svg"
+                    alt="icon link to the Cookie policy"
+                    srcset=""
+                />
+                <h2 class="text text-heading">Cookie Policy</h2>
+            </a>
         </div>
         <div class="contacts">
             <h2 class="text text-heading">Contatti</h2>
@@ -159,6 +165,13 @@
     div.cookie {
         width: auto;
         align-items: center;
+    }
+
+    .cookie-inner {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
     }
 
     img.link-icon {

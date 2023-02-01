@@ -9,19 +9,19 @@
     text = addEllipsis(text, 80);
 </script>
 
-<div
-    class="container"
-    style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%), url({imgURL});"
->
-    <div class="heading">
-        <h2 class="text-extend text-heading">{title}</h2>
-        <h4 class="text-extend text-link">
-            <a {href}>
+<a {href}>
+    <div
+        class="container"
+        style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%), url({imgURL});"
+    >
+        <div class="heading">
+            <h2 class="text-extend text-heading">{title}</h2>
+            <h4 class="text-extend text-link">
                 {text}
-            </a>
-        </h4>
+            </h4>
+        </div>
     </div>
-</div>
+</a>
 
 <style>
     div.container {
