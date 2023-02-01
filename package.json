@@ -17,6 +17,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fancyapps/ui": "^4.0.31",
 		"contentful": "^9.3.0",
 		"contentful-import": "^8.5.24",
 		"dotenv": "^16.0.3",

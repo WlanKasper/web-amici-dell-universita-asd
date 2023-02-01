@@ -69,6 +69,7 @@
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         footer {
             width: 90vw;
+            margin-top: 10vh;
             padding: var(--padding-section);
         }
     }
