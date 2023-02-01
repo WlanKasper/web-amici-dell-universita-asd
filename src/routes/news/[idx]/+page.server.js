@@ -1,4 +1,5 @@
 import contentfulFetch from '$lib/utils/util-contentful';
+import { contentfulJsonToHtmlText } from '$lib/utils/util-text';
 
 const load = async (context) => {
     const { params } = context;
@@ -44,6 +45,9 @@ const load = async (context) => {
 
     const { data } = await response.json();
     const { newsSectionCollection } = data;
+
+    const jsonData = newsSectionCollection.items[0].text.json;
+    newsSectionCollection.items[0].text = contentfulJsonToHtmlText(jsonData);
 
     return {
         newsSection: newsSectionCollection.items,

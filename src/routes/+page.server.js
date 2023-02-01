@@ -1,4 +1,5 @@
 import contentfulFetch from '$lib/utils/util-contentful';
+import { contentfulJsonToHtmlText } from '$lib/utils/util-text';
 
 const query = `
 {
@@ -46,6 +47,10 @@ const load = async () => {
 
   const { data } = await response.json();
   const { sportSectionCollection, newsSectionCollection } = data;
+
+  newsSectionCollection.items.forEach(item => {
+    item.text = contentfulJsonToHtmlText(item.text.json);
+  });
 
   return {
     sportSection: sportSectionCollection.items,

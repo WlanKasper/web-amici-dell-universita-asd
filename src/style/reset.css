@@ -105,10 +105,10 @@ body {
     line-height: 1;
 }
 
-/* ol,
+ol,
 ul {
-    list-style: none;
-} */
+    margin-left: 2rem;
+}
 
 blockquote,
 q {

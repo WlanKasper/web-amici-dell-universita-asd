@@ -8,7 +8,7 @@
     export let href;
 
     const ftmDate = format(new Date(date));
-    const ftmText = addEllipsis(text, 364);
+    const ftmText = addEllipsis(text, Math.floor(Math.random() * (256 - 128 + 1)) + 128);
 </script>
 
 <div class="container">

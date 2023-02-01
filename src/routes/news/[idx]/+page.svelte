@@ -39,55 +39,9 @@
         title: data.newsSection[0].title,
         titleSport: data.newsSection[0].sportSection.title,
         date: format(new Date(data.newsSection[0].date)),
+        text: data.newsSection[0].text,
         assets: data.newsSection[0].imagesFilesCollection.items,
     };
-
-    const text = data.newsSection[0].text.json.content.reduce(
-        (html, content) => {
-            switch (content.nodeType) {
-                case "heading-1":
-                case "heading-2":
-                case "heading-3":
-                case "heading-4":
-                    return (
-                        html +
-                        `<h2 class="text">${content.content[0].value}</h2>`
-                    );
-                case "paragraph":
-                    return (
-                        html +
-                        `<h4 class="text">${content.content
-                            .map((c) => {
-                                let value = c.value;
-                                if (
-                                    c.marks.find((mark) => mark.type === "bold")
-                                ) {
-                                    value = `<span class="text-heading">${value}</span>`;
-                                }
-                                return value;
-                            })
-                            .join("")}</h4>`
-                    );
-                case "unordered-list":
-                    return (
-                        html +
-                        `<ul>${content.content
-                            .map(
-                                (c) =>
-                                    `<li>
-                                        <h4 class"text">
-                                            ${c.content[0].content[0].value}
-                                        </h4>
-                                    </li>`
-                            )
-                            .join("")}</ul>`
-                    );
-                default:
-                    return html;
-            }
-        },
-        ""
-    );
 </script>
 
 <section class="container">
@@ -105,7 +59,7 @@
         </h4>
     </div>
     <div class="news-text">
-        {@html text}
+        {@html props.text}
     </div>
     <div class="assets">
         {#each props.assets as asset}
@@ -169,6 +123,12 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 2rem;
+    }
+
+    @media screen and (min-width: 100px) and (max-width: 1140px) {
+        div.news-text {
+            max-width: 90vw;
+        }
     }
 
     div.assets {
