@@ -34,6 +34,7 @@
             },
         },
     });
+    
     const props = {
         title: data.newsSection[0].title,
         titleSport: data.newsSection[0].sportSection.title,

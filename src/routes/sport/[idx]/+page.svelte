@@ -1,7 +1,39 @@
 <script>
+    import { Fancybox } from "@fancyapps/ui";
     import NewsPreview from "$lib/components/NewsPreview.svelte";
 
     export let data;
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        dragToClose: false,
+        preload: 3,
+        Toolbar: {
+            display: ["download", { id: "clouse", position: "top" }],
+        },
+        closeButton: "top",
+        download: true,
+        Image: {
+            zoom: false,
+        },
+        on: {
+            initCarousel: (fancybox) => {
+                const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+
+                fancybox.$container.style.setProperty(
+                    "--bg-image",
+                    `url("${slide.$thumb.src}")`
+                );
+            },
+            "Carousel.change": (fancybox, carousel, to, from) => {
+                const slide = carousel.slides[to];
+
+                fancybox.$container.style.setProperty(
+                    "--bg-image",
+                    `url("${slide.$thumb.src}")`
+                );
+            },
+        },
+    });
 
     const props = {
         sport: {
@@ -44,10 +76,14 @@
                 {/if}
                 <div class="photo-container">
                     {#each props.photo.collection as photo}
-                        <div
+                        <!-- <div
                             class="photo"
                             style="background-image: url({photo.url});"
-                        />
+                        /> -->
+
+                        <a data-fancybox="gallery" href={photo.url}>
+                            <img class="photo" src={photo.url} alt={photo.title} />
+                        </a>
                     {/each}
                 </div>
             </section>
@@ -134,9 +170,8 @@
         }
     }
 
-    div.photo {
-        width: 200px;
-        height: 120px;
+    img.photo {
+        height: 16vh;
 
         border-radius: 4px;
 
@@ -145,9 +180,9 @@
     }
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
-        div.photo {
-            width: 40vw;
-            height: 15vh;
+        img.photo {
+            /* width: 40vw; */
+            height: 12vh;
 
             border-radius: 4px;
 

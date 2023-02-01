@@ -30,9 +30,16 @@
     --carousel-button-svg-stroke-width: 2.5;
 }
 
-.fancybox__nav {
+.fancybox__nav,
+.fancybox__toolbar {
     --carousel-button-svg-width: 24px;
     --carousel-button-svg-height: 24px;
+}
+
+.fancybox__toolbar {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .fancybox__nav .carousel__button.is-prev {
