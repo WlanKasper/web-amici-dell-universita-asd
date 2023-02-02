@@ -3,13 +3,16 @@
 
     import Header from "../lib/Header.svelte";
     import Footer from "../lib/Footer.svelte";
+    import { page } from "$app/stores";
 </script>
 
 <Header />
 <main>
     <slot />
 </main>
-<Footer />
+{#if !$page.error}
+    <Footer />
+{/if}
 
 <style>
     main {
