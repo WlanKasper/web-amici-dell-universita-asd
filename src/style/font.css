@@ -68,18 +68,19 @@ h6 {
 
 @media screen and (min-width: 100px) and (max-width: 1140px) {
     h1 {
+        font-size: 32px;
     }
 
     h2 {
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 21px;
+        line-height: 26px;
     }
 
     h3 {
     }
 
     h4 {
-        font-size: 14px;
+        font-size: 18px;
         line-height: 20px;
     }
 
