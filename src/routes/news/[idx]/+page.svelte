@@ -78,6 +78,7 @@
         flex-direction: column;
         gap: 6vh 0;
 
+        margin-top: 8rem;
         padding: 10vh 0;
 
         padding: var(--padding-section);

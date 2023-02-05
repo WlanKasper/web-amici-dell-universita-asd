@@ -67,7 +67,7 @@
             <section id="description">
                 <h2 class="text text-heading text-accent">Descrizione</h2>
                 <h4 class="text text-dercription">
-                    {props.sport.description}
+                    {@html props.sport.description}
                 </h4>
             </section>
             <section id="photo">
@@ -76,11 +76,6 @@
                 {/if}
                 <div class="photo-container">
                     {#each props.photo.collection as photo}
-                        <!-- <div
-                            class="photo"
-                            style="background-image: url({photo.url});"
-                        /> -->
-
                         <a data-fancybox="gallery" href={photo.url}>
                             <img class="photo" src={photo.url} alt={photo.title} />
                         </a>
@@ -93,7 +88,7 @@
                 <NewsPreview
                     title={news.sportSection.title}
                     date={news.date}
-                    text={news.text.json.content[0].content[0].value}
+                    text={news.text}
                     href="/news/{news.sys.id}"
                 />{/each}
         </section>

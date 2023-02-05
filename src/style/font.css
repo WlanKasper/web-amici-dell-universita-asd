@@ -18,17 +18,15 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 28px;
     line-height: 46px;
 }
 
 h3 {
-    font-size: 26px;
-    line-height: 40px;
 }
 
 h4 {
-    font-size: 22px;
+    font-size: 21px;
     line-height: 32px;
 }
 
@@ -36,8 +34,6 @@ h5 {
 }
 
 h6 {
-    /* font-size: 22px;
-    line-height: 40px; */
 }
 
 .text-heading {
@@ -80,7 +76,7 @@ h6 {
     }
 
     h4 {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 20px;
     }
 
