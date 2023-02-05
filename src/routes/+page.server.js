@@ -1,61 +1,16 @@
-import contentfulFetch from '$lib/utils/util-contentful';
+import { getNews, getSections } from '$lib/utils/util-contentful';
 import { contentfulJsonToHtmlText } from '$lib/utils/util-text';
 
-const query = `
-{
-  sportSectionCollection {
-    items {
-      sys {
-        id
-      }
-      title
-      description
-      imageHero {
-        url
-      }
-    }
-	}
-  newsSectionCollection {
-    items {
-      sys {
-        id
-      }
-      title
-      date
-      text {
-        json
-      }
-      imagesFilesCollection(limit: 10) {
-        items {
-          title
-          url
-        }
-      }
-    }
-  }
-}
-`;
+export const load = async () => {
+  const itemsNews = await getNews();
+  const itemsSections = await getSections();
 
-const load = async () => {
-  const response = await contentfulFetch(query);
-
-  if (!response.ok) {
-    throw error(404, {
-      message: response.statusText,
-    });
-  }
-
-  const { data } = await response.json();
-  const { sportSectionCollection, newsSectionCollection } = data;
-
-  newsSectionCollection.items.forEach(item => {
+  itemsNews.forEach(item => {
     item.text = contentfulJsonToHtmlText(item.text.json);
   });
 
   return {
-    sportSection: sportSectionCollection.items,
-    newsSection: newsSectionCollection.items,
-  }
+    newsSection: itemsNews,
+    sportSection: itemsSections,
+  };
 };
-
-export { load };

@@ -76,11 +76,6 @@
                 {/if}
                 <div class="photo-container">
                     {#each props.photo.collection as photo}
-                        <!-- <div
-                            class="photo"
-                            style="background-image: url({photo.url});"
-                        /> -->
-
                         <a data-fancybox="gallery" href={photo.url}>
                             <img class="photo" src={photo.url} alt={photo.title} />
                         </a>
