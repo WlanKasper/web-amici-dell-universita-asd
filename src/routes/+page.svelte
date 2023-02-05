@@ -5,14 +5,13 @@
     export let data;
 
     const sportPreview = {
-        heading: data.sportSection.slice(0, 3),
-        all: data.sportSection.slice(3, 7),
+        heading: data.sportSection.slice(0, 4),
+        all: data.sportSection.slice(4, 8),
     };
 
     const newsPreview = {
-        heading: data.newsSection.slice(0, 1),
-        center: data.newsSection.slice(1, 5),
-        all: data.newsSection.slice(5, 10),
+        heading: data.newsSection.slice(0, 4),
+        all: data.newsSection.slice(4, 10),
         length: data.newsSection.length,
         gap: 6,
     };
@@ -46,17 +45,9 @@
                 imgURL={sport.imageHero.url}
             />
         {/each}
-        {#each newsPreview.heading as news}
-            <NewsPreview
-                title={news.title}
-                date={news.date}
-                text={news.text}
-                href="/news/{news.sys.id}"
-            />
-        {/each}
     </section>
     <section class="news-preview">
-        {#each newsPreview.center as news}
+        {#each newsPreview.heading as news}
             <NewsPreview
                 title={news.title}
                 date={news.date}
