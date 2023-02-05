@@ -42,6 +42,7 @@
     @media screen and (min-width: 1px) and (max-width: 600px) {
         div.container {
             max-width: 90vw;
+            padding: 0;
         }
     }
 
