@@ -77,20 +77,30 @@
                 <div class="photo-container">
                     {#each props.photo.collection as photo}
                         <a data-fancybox="gallery" href={photo.url}>
-                            <img class="photo" src={photo.url} alt={photo.title} />
+                            <img
+                                class="photo"
+                                src={photo.url}
+                                alt={photo.title}
+                            />
                         </a>
                     {/each}
                 </div>
             </section>
         </div>
         <section id="news">
-            {#each props.news.collection as news}
-                <NewsPreview
-                    title={news.sportSection.title}
-                    date={news.date}
-                    text={news.text}
-                    href="/news/{news.sys.id}"
-                />{/each}
+            {#if props.news.collection.length > 0}
+                <h2 class="text text-heading text-accent">News</h2>
+            {/if}
+            <div class="news-container">
+                {#each props.news.collection as news}
+                    <NewsPreview
+                        title={news.sportSection.title}
+                        date={news.date}
+                        text={news.text}
+                        href="/news/{news.sys.id}"
+                    />
+                {/each}
+            </div>
         </section>
     </div>
 </section>
@@ -186,7 +196,7 @@
         }
     }
 
-    section#news {
+    div.news-container {
         display: grid;
         gap: 5rem 0;
     }
