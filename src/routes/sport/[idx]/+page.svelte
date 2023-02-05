@@ -67,7 +67,7 @@
             <section id="description">
                 <h2 class="text text-heading text-accent">Descrizione</h2>
                 <h4 class="text text-dercription">
-                    {props.sport.description}
+                    {@html props.sport.description}
                 </h4>
             </section>
             <section id="photo">
@@ -88,7 +88,7 @@
                 <NewsPreview
                     title={news.sportSection.title}
                     date={news.date}
-                    text={news.text.json.content[0].content[0].value}
+                    text={news.text}
                     href="/news/{news.sys.id}"
                 />{/each}
         </section>

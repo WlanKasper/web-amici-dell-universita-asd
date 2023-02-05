@@ -73,7 +73,9 @@ const queryList = {
               id
             }
             title
-            description
+            description {
+              json
+            }
             imageHero {
               url
             }
@@ -132,8 +134,6 @@ export const getSections = async (idx) => {
 export const getAssets = async (tag, max) => {
   const query = queryList.assets(tag, max);
   const data = await getData(query);
-
-  console.log(data);
 
   return getItems(data);
 };
