@@ -1,12 +1,22 @@
-## Developing
+## Setup
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Before you start, you have to create a .env file and insert those keys (you can find them in contentful)
+```
+CONTENTFUL_SPACE_ID = <key>
+CONTENTFUL_ACCESS_TOKEN = <key>
+CONTENTFUL_MANAGEMENT_TOKEN = <key>
+```
+
+After that you have to install dependencies
+```bash
+npm install
+```
+
+## Run
+Once you've created a project and installed dependencies start a development server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
 ## Building
