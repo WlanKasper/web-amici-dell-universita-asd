@@ -26,11 +26,6 @@
             ...data.newsSection.slice(idx - newsPreview.gap, idx),
         ];
 
-        if (idx > newsPreview.length) {
-            const section = document.querySelector("section.show");
-            section.classList.toggle("hidden", true);
-        }
-
         count += 1;
     };
 </script>
@@ -77,11 +72,13 @@
                 />
             {/each}
         </section>
-        <section class="show">
-            <button class="show-more" on:click={heandlerClickShow}>
-                <h2 class="text-heading text-extend">Mostra di piu</h2>
-            </button>
-        </section>
+        {#if newsPreview.length + newsPreview.gap > 10}
+            <section class="show">
+                <button class="show-more" on:click={heandlerClickShow}>
+                    <h2 class="text-heading text-extend">Mostra di piu</h2>
+                </button>
+            </section>
+        {/if}
     {/if}
 </div>
 
