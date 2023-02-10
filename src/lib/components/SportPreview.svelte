@@ -6,7 +6,9 @@
     export let href;
     export let imgURL;
 
-    text = addEllipsis(text, 80);
+    if (text) {
+        text = addEllipsis(text, 80);
+    }
 </script>
 
 <a {href}>
@@ -16,16 +18,18 @@
     >
         <div class="heading">
             <h2 class="text-extend text-heading">{title}</h2>
-            <h4 class="text-extend text-link">
-                {text}
-            </h4>
+            {#if text}
+                <h4 class="text-extend text-link">
+                    {text}
+                </h4>
+            {/if}
         </div>
     </div>
 </a>
 
 <style>
     div.container {
-        height: 30rem;
+        height: 40rem;
 
         display: flex;
         align-items: flex-end;
@@ -33,6 +37,13 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        transition: all 0.1s ease-in-out;
+    }
+
+    div.container:hover {
+        filter: drop-shadow(0px 5px 15px gray);
+        transition: all 0.2s ease-in-out;
     }
 
     @media screen and (min-width: 1px) and (max-width: 600px) {
@@ -49,13 +60,13 @@
         flex-direction: column;
         gap: 10px;
 
-        padding: 40px 20px;
+        padding: 10px 20px;
     }
 
     @media screen and (min-width: 1px) and (max-width: 600px) {
         div.heading {
             max-width: 40vw;
-            padding: 18px 10px;
+            padding: 10px 10px;
             gap: 2px;
         }
     }

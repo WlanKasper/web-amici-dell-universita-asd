@@ -10,10 +10,10 @@
     };
 
     const newsPreview = {
-        heading: data.newsSection.slice(0, 4),
-        all: data.newsSection.slice(4, 10),
+        heading: data.newsSection.slice(0, 8),
+        all: data.newsSection.slice(8, 12),
         length: data.newsSection.length,
-        gap: 6,
+        gap: 4,
     };
 
     let count = 0;
@@ -35,7 +35,6 @@
         {#each sportPreview.heading as sport}
             <SportPreview
                 title={sport.title}
-                text={sport.description}
                 href="/sport/{sport.sys.id}"
                 imgURL={sport.imageHero.url}
             />
@@ -55,7 +54,6 @@
         {#each sportPreview.all as sport}
             <SportPreview
                 title={sport.title}
-                text={sport.description}
                 href="/sport/{sport.sys.id}"
                 imgURL={sport.imageHero.url}
             />
@@ -72,7 +70,7 @@
                 />
             {/each}
         </section>
-        {#if newsPreview.length + newsPreview.gap > 10}
+        {#if (newsPreview.length) >= 12 + (count * newsPreview.gap)}
             <section class="show">
                 <button class="show-more" on:click={heandlerClickShow}>
                     <h2 class="text-heading text-extend">Mostra di piu</h2>
@@ -99,29 +97,29 @@
 
     section.sport-preview {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.25rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
     }
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         section.sport-preview {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0.125rem;
+            gap: 0.25rem;
         }
     }
 
     section.news-preview {
+        padding: 0 4vw;
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 5rem 0;
-
-        padding: var(--padding-section);
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 5rem;
     }
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         section.news-preview {
-            grid-template-columns: repeat(1, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 3rem;
         }
     }
 
