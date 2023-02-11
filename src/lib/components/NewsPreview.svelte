@@ -8,14 +8,12 @@
     export let href;
 
     const ftmDate = format(new Date(date));
-    const ftmText = addEllipsis(text, Math.floor(Math.random() * (256 - 128 + 1)) + 128);
+    const ftmText = addEllipsis(text, Math.floor(Math.random() * (160 - 100 + 1)) + 100);
 </script>
 
 <div class="container">
     <div class="heading">
         <h2 class="text text-heading">{title}</h2>
-        <div class="line-split" />
-        <h4 class="text">{ftmDate}</h4>
     </div>
     <div class="description">
         <h4 class="text text-link">
@@ -24,12 +22,13 @@
             </a>
         </h4>
     </div>
+    <h5 class="text text-date">{ftmDate}</h5>
 </div>
 
 <style>
     div.container {
         width: fit-content;
-        max-width: 35vw;
+        max-width: 25vw;
 
         display: flex;
         align-items: stretch;
@@ -39,7 +38,7 @@
 
     @media screen and (min-width: 1px) and (max-width: 600px) {
         div.container {
-            max-width: 90vw;
+            max-width: 50vw;
         }
     }
 
@@ -55,23 +54,16 @@
 
     @media screen and (min-width: 1px) and (max-width: 600px) {
         div.heading {
-            gap: 15px;
+            gap: 4px;
+            flex-direction: column;
+            align-items: flex-start;
 
             padding: 5px 0;
         }
     }
 
-    div.line-split {
-        width: 1px;
-        height: 35px;
-
-        background-color: var(--line);
-    }
-
-    @media screen and (min-width: 1px) and (max-width: 600px) {
-        div.line-split {
-            height: 25px;
-        }
+    .text-heading {
+        width: auto;
     }
 
     div.description {
@@ -82,5 +74,12 @@
         div.description {
             margin-top: 5px;
         }
+    }
+
+    .text-date {
+        width: min-content;
+        text-align: left;
+        margin-top: 1rem;
+        border-bottom: 1px solid var(--line-extend);
     }
 </style>
