@@ -13,7 +13,7 @@
 }
 
 :root {
-    --padding: 0 10vw;
+    --padding: 0 10.25rem;
 }
 
 @media screen and (min-width: 100px) and (max-width: 1140px) {
