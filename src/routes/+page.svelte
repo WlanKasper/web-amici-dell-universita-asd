@@ -50,7 +50,7 @@
             />
         {/each}
     </section>
-    <section class="sport-preview">
+    <section class="sport-preview sport-preview-extend">
         {#each sportPreview.all as sport}
             <SportPreview
                 title={sport.title}
@@ -98,7 +98,7 @@
     section.sport-preview {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 1rem;
+        gap: 0.5rem;
     }
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
@@ -107,6 +107,10 @@
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 0.25rem;
         }
+    }
+
+    section.sport-preview-extend {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     section.news-preview {
@@ -134,6 +138,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        border-radius: 8px;
 
         cursor: pointer;
 

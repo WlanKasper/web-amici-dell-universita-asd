@@ -78,15 +78,12 @@
         flex-direction: column;
         gap: 6vh 0;
 
-        margin-top: 8rem;
-        padding: 10vh 0;
-
-        padding: var(--padding-section);
+        padding: 4rem 6rem;
     }
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         section.container {
-            margin-top: 3vh;
+            padding: 2rem 1rem;
             gap: 3vh 0;
         }
     }

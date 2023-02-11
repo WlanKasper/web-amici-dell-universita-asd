@@ -106,6 +106,7 @@
 </section>
 
 <style>
+
     div.heading {
         height: 40vh;
 
@@ -122,15 +123,18 @@
     div.container {
         display: flex;
         align-items: flex-start;
+        justify-content: space-between;
         flex-direction: row;
         gap: 6rem;
 
+        padding: 0 8rem;
         padding-top: 5vh;
     }
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         div.container {
             flex-direction: column;
+            justify-content: none;
 
             padding: var(--padding-section);
             padding-top: 5vh;
