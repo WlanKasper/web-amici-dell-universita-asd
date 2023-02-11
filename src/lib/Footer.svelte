@@ -67,7 +67,7 @@
         justify-content: space-between;
         flex-direction: column;
 
-        margin-top: 20vh;
+        margin-top: 12vh;
         padding: var(--padding);
         border-top: 1px solid var(--line);
     }
@@ -75,7 +75,7 @@
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         footer {
             width: 90vw;
-            margin-top: 10vh;
+            margin-top: 8vh;
             padding: var(--padding-section);
         }
     }

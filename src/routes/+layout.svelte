@@ -16,15 +16,12 @@
 
 <style>
     main {
-        padding: var(--padding);
-        padding-top: calc(8vh + 4px);
+        padding: 1rem;
     }
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         main {
-            padding: 0;
-
-            padding-top: calc(6vh + 2px);
+            padding: 0.25rem;
         }
     }
 </style>
