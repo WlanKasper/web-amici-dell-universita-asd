@@ -28,17 +28,6 @@
                 Diletantistica)
             </h6>
         </div>
-        <div class="cookie">
-            <a class="cookie-inner" href="https://www.units.it/cookie">
-                <img
-                    class="link link-icon"
-                    src="/images/icon-link.svg"
-                    alt="icon link to the Cookie policy"
-                    srcset=""
-                />
-                <h2 class="text text-heading">Cookie Policy</h2>
-            </a>
-        </div>
         <div class="contacts">
             <h2 class="text text-heading">Contatti</h2>
             <h6 class="text">
@@ -103,7 +92,6 @@
     }
 
     div.links,
-    div.cookie,
     div.contacts {
         width: 15vw;
 
@@ -117,7 +105,6 @@
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         div.links,
-        div.cookie,
         div.contacts {
             width: 80vw;
 
@@ -159,28 +146,6 @@
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         img.link-units {
             height: 36px;
-        }
-    }
-
-    div.cookie {
-        width: auto;
-        align-items: center;
-    }
-
-    .cookie-inner {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    img.link-icon {
-        height: 28px;
-    }
-
-    @media screen and (min-width: 100px) and (max-width: 1140px) {
-        img.link-icon {
-            height: 22px;
         }
     }
 </style>

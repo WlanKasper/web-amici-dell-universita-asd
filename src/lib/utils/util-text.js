@@ -35,10 +35,12 @@ const contentfulJsonToHtmlText = (json) => {
                         `<h4 class="text">${content.content
                             .map((c) => {
                                 let value = c.value;
-                                if (
-                                    c.marks.find((mark) => mark.type === "bold")
-                                ) {
+                                if (c.marks && c.marks.find((mark) => mark.type === "bold")) {
                                     value = `<span class="text-heading">${value}</span>`;
+                                }
+                                console.log(c);
+                                if (c.data.uri) {
+                                    value = `<a class="text-accent" href="${c.data.uri}">${c.content[0].value}</a>`;
                                 }
                                 return value;
                             })
