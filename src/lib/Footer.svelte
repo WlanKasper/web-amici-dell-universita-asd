@@ -28,7 +28,7 @@
                 Diletantistica)
             </h6>
         </div>
-        <div class="cookie">
+        <!-- <div class="cookie">
             <a class="cookie-inner" href="https://www.units.it/cookie">
                 <img
                     class="link link-icon"
@@ -38,7 +38,7 @@
                 />
                 <h2 class="text text-heading">Cookie Policy</h2>
             </a>
-        </div>
+        </div> -->
         <div class="contacts">
             <h2 class="text text-heading">Contatti</h2>
             <h6 class="text">
