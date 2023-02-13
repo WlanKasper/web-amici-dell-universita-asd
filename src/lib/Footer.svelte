@@ -17,7 +17,7 @@
                 <a href="https://www.units.it/">
                     <img
                         class="link link-units"
-                        src="/images/logo-units.svg"
+                        src="/images/logo-units.webp"
                         alt="icon link to UniTS (universita di Trieste)"
                         srcset=""
                     />
