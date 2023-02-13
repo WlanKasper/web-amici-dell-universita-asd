@@ -13,7 +13,7 @@
     <a href="https://www.units.it/">
         <img
             class="logo-units"
-            src="/images/logo-units.svg"
+            src="/images/logo-units.webp"
             alt="logo (UniTS: universita di Trieste)"
             srcset=""
         />
