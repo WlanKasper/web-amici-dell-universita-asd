@@ -8,20 +8,23 @@
     export let href;
 
     const ftmDate = format(new Date(date));
-    const ftmText = addEllipsis(text, Math.floor(Math.random() * (160 - 100 + 1)) + 100);
+    const ftmText = addEllipsis(
+        text,
+        Math.floor(Math.random() * (160 - 100 + 1)) + 100
+    );
 </script>
 
 <div class="container">
-    <div class="heading">
-        <h2 class="text text-heading">{title}</h2>
-    </div>
-    <div class="description">
-        <h4 class="text text-link">
-            <a {href}>
+    <a {href}>
+        <div class="heading">
+            <h2 class="text text-heading">{title}</h2>
+        </div>
+        <div class="description">
+            <h4 class="text text-link">
                 {ftmText}
-            </a>
-        </h4>
-    </div>
+            </h4>
+        </div>
+    </a>
     <h5 class="text text-date">{ftmDate}</h5>
 </div>
 
