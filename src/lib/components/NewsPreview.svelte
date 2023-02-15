@@ -39,7 +39,7 @@
         flex-direction: column;
     }
 
-    @media screen and (min-width: 1px) and (max-width: 600px) {
+    @media screen and (min-width: 1px) and (max-width: 1140px) {
         div.container {
             max-width: 50vw;
         }
@@ -55,7 +55,7 @@
         border-top: 1px solid var(--line-extend);
     }
 
-    @media screen and (min-width: 1px) and (max-width: 600px) {
+    @media screen and (min-width: 1px) and (max-width: 1140px) {
         div.heading {
             gap: 4px;
             flex-direction: column;
@@ -73,7 +73,7 @@
         margin-top: 10px;
     }
 
-    @media screen and (min-width: 1px) and (max-width: 600px) {
+    @media screen and (min-width: 1px) and (max-width: 1140px) {
         div.description {
             margin-top: 5px;
         }

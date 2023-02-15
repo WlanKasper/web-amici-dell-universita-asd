@@ -48,7 +48,7 @@
         transition: all 0.2s ease-in-out;
     }
 
-    @media screen and (min-width: 1px) and (max-width: 600px) {
+    @media screen and (min-width: 1px) and (max-width: 1140px) {
         div.container {
             height: 20rem;
         }
@@ -65,7 +65,7 @@
         padding: 10px 20px;
     }
 
-    @media screen and (min-width: 1px) and (max-width: 600px) {
+    @media screen and (min-width: 1px) and (max-width: 1140px) {
         div.heading {
             max-width: 40vw;
             padding: 10px 10px;
