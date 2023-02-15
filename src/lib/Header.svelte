@@ -46,12 +46,12 @@
     }
 
     img.logo-asd {
-        height: 50px;
+        height: 58px;
     }
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         img.logo-asd {
-            height: 32px;
+            height: 38px;
         }
     }
 
