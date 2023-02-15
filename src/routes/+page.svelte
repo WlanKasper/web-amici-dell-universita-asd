@@ -6,14 +6,14 @@
 
     const sportPreview = {
         heading: data.sportSection.slice(0, 4),
-        all: data.sportSection.slice(4, 8),
+        all: data.sportSection.slice(4),
     };
 
     const newsPreview = {
         heading: data.newsSection.slice(0, 8),
         all: data.newsSection.slice(8, 12),
         length: data.newsSection.length,
-        gap: 4,
+        gap: 8,
     };
 
     let count = 0;

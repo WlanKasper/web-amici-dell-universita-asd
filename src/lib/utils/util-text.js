@@ -38,7 +38,6 @@ const contentfulJsonToHtmlText = (json) => {
                                 if (c.marks && c.marks.find((mark) => mark.type === "bold")) {
                                     value = `<span class="text-heading">${value}</span>`;
                                 }
-                                console.log(c);
                                 if (c.data.uri) {
                                     value = `<a class="text-accent" href="${c.data.uri}">${c.content[0].value}</a>`;
                                 }
