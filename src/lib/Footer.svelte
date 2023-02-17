@@ -25,7 +25,7 @@
             </div>
             <h6 class="text">
                 Amici dell'università A.S.D (Associazione Sportiva
-                Diletantistica)
+                Dilettantistica)
             </h6>
         </div>
         <div class="contacts">
