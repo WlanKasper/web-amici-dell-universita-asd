@@ -31,7 +31,7 @@
         <div class="contacts">
             <h2 class="text text-heading">Contatti</h2>
             <h6 class="text">
-                email: crutsport@units.it
+                email: amici.universita@units.it
                 <br />
                 tel: +39 040 558 3117
                 <br />
