@@ -21,7 +21,7 @@
     <a href="/">
         <img
             class="logo-fav"
-            src="/images/favicon.svg"
+            src="/images/logo.svg"
             alt="logo (Amici dell'universita A.S.D.)"
             srcset=""
         />

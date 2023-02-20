@@ -6,6 +6,10 @@
     import { page } from "$app/stores";
 </script>
 
+<svelte:head>
+    <link rel="icon" type="image/svg" href="/images/favicon.svg" />
+</svelte:head>
+
 <Header />
 <main>
     <slot />
