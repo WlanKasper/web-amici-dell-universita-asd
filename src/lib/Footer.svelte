@@ -24,8 +24,8 @@
                 </a>
             </div>
             <h6 class="text">
-                Amici dell'universita A.S.D (Associazione Sportiva
-                Diletantistica)
+                Amici dell'università A.S.D (Associazione Sportiva
+                Dilettantistica)
             </h6>
         </div>
         <div class="contacts">
@@ -33,9 +33,9 @@
             <h6 class="text">
                 email: amici.universita@units.it
                 <br />
-                tel: +39 040 558 3117
+                cell: +39 3389794455
                 <br />
-                fax: +39 040 558 3734
+                cell: +39 3347605910
                 <br />
                 CF: 90106730329
             </h6>
