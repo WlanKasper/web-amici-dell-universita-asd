@@ -2,14 +2,6 @@
 </script>
 
 <header>
-    <a href="/">
-        <img
-            class="logo-asd"
-            src="/images/logo-asd.svg"
-            alt="logo (Amici dell'universita A.S.D.)"
-            srcset=""
-        />
-    </a>
     <a href="https://www.units.it/">
         <img
             class="logo-units"
@@ -18,11 +10,26 @@
             srcset=""
         />
     </a>
+    <a href="/">
+        <img
+            class="logo-asd"
+            src="/images/logo-asd.svg"
+            alt="logo (Amici dell'universita A.S.D.)"
+            srcset=""
+        />
+    </a>
+    <a href="/">
+        <img
+            class="logo-fav"
+            src="/images/favicon.svg"
+            alt="logo (Amici dell'universita A.S.D.)"
+            srcset=""
+        />
+    </a>
 </header>
 
 <style>
     header {
-        width: 80vw;
         height: 10vh;
 
         padding: var(--padding);
@@ -31,7 +38,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: row;
-        gap: 2rem;
+        gap: 4rem;
 
         background-color: var(--background);
     }
@@ -41,17 +48,19 @@
             width: 90vw;
             height: 8vh;
 
+            gap: 3rem;
+
             padding: var(--padding-section);
         }
     }
 
     img.logo-asd {
-        height: 58px;
+        height: 68px;
     }
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         img.logo-asd {
-            height: 38px;
+            height: 46px;
         }
     }
 
@@ -61,7 +70,17 @@
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         img.logo-units {
-            height: 38px;
+            height: 42px;
+        }
+    }
+
+    img.logo-fav {
+        height: 62px;
+    }
+
+    @media screen and (min-width: 100px) and (max-width: 1140px) {
+        img.logo-fav {
+            height: 42px;
         }
     }
 </style>
