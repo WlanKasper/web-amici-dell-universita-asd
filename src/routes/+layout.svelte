@@ -8,6 +8,7 @@
 
 <svelte:head>
     <link rel="icon" type="image/svg" href="/images/favicon.svg" />
+    <title>Amici dell'università</title>
 </svelte:head>
 
 <Header />
