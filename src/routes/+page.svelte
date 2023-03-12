@@ -36,7 +36,7 @@
             <SportPreview
                 title={sport.title}
                 href="/sport/{sport.sys.id}"
-                imgURL={sport.imageHero.url}
+                imgURL={sport.imageHero && sport.imageHero.url}
             />
         {/each}
     </section>
