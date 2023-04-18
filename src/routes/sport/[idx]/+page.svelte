@@ -94,7 +94,7 @@
             <div class="news-container">
                 {#each props.news.collection as news}
                     <NewsPreview
-                        title={news.sportSection.title}
+                        title={news.title}
                         date={news.date}
                         text={news.text}
                         href="/news/{news.sys.id}"
@@ -116,7 +116,6 @@
 
         padding: 8px 24px;
 
-        /* background-repeat: no-repeat; */
         background-position: center;
     }
 
