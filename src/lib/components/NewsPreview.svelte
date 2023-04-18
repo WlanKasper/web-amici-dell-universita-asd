@@ -18,6 +18,7 @@
     <a {href}>
         <div class="heading">
             <h2 class="text text-heading">{title}</h2>
+            <h5 class="text text-date">{ftmDate}</h5>
         </div>
         <div class="description">
             <h4 class="text text-link">
@@ -25,7 +26,7 @@
             </h4>
         </div>
     </a>
-    <h5 class="text text-date">{ftmDate}</h5>
+    
 </div>
 
 <style>
@@ -47,9 +48,10 @@
 
     div.heading {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
-        gap: 30px;
+        flex-direction: column;
+        gap: 8px;
 
         padding: 10px 0;
         border-top: 1px solid var(--line-extend);
@@ -82,7 +84,7 @@
     .text-date {
         width: min-content;
         text-align: left;
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
         border-bottom: 1px solid var(--line-extend);
     }
 </style>
