@@ -10,7 +10,7 @@
 
 *:not(br):not(hr):not(img) {
     font-family: "Rajdhani", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h1 {
@@ -38,7 +38,7 @@ h6 {
 
 .text-heading {
     font-family: "Rajdhani Bold", sans-serif;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .text {
