@@ -1,39 +1,43 @@
 <script>
     import * as pkg from "@fancyapps/ui";
     import { format } from "$lib/utils/util-date.js";
+    import { onMount } from "svelte";
     const { Fancybox } = pkg;
 
     export let data;
 
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        dragToClose: false,
-        preload: 3,
-        Toolbar: {
-            display: ["download", { id: "clouse", position: "top" }],
-        },
-        closeButton: "top",
-        download: true,
-        Image: {
-            zoom: false,
-        },
-        on: {
-            initCarousel: (fancybox) => {
-                const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
-
-                fancybox.$container.style.setProperty(
-                    "--bg-image",
-                    `url("${slide.$thumb.src}")`
-                );
+    onMount(() => {
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            dragToClose: false,
+            preload: 3,
+            Toolbar: {
+                display: ["download", { id: "clouse", position: "top" }],
             },
-            "Carousel.change": (fancybox, carousel, to, from) => {
-                const slide = carousel.slides[to];
-
-                fancybox.$container.style.setProperty(
-                    "--bg-image",
-                    `url("${slide.$thumb.src}")`
-                );
+            closeButton: "top",
+            download: true,
+            Image: {
+                zoom: false,
             },
-        },
+            on: {
+                initCarousel: (fancybox) => {
+                    const slide =
+                        fancybox.Carousel.slides[fancybox.Carousel.page];
+
+                    fancybox.$container.style.setProperty(
+                        "--bg-image",
+                        `url("${slide.$thumb.src}")`
+                    );
+                },
+                "Carousel.change": (fancybox, carousel, to, from) => {
+                    const slide = carousel.slides[to];
+
+                    fancybox.$container.style.setProperty(
+                        "--bg-image",
+                        `url("${slide.$thumb.src}")`
+                    );
+                },
+            },
+        });
     });
 
     const props = {
