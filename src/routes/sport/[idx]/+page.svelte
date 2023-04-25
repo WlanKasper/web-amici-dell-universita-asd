@@ -1,8 +1,7 @@
 <script>
-    import * as pkg from "@fancyapps/ui";
+    import { Fancybox }from "@fancyapps/ui";
     import NewsPreview from "$lib/components/NewsPreview.svelte";
     import { onMount } from "svelte";
-    const { Fancybox } = pkg;
 
     export let data;
 

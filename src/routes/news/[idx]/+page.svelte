@@ -1,8 +1,7 @@
 <script>
-    import * as pkg from "@fancyapps/ui";
+    import { Fancybox } from "@fancyapps/ui";
     import { format } from "$lib/utils/util-date.js";
     import { onMount } from "svelte";
-    const { Fancybox } = pkg;
 
     export let data;
 
