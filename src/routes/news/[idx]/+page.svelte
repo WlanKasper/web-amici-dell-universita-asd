@@ -1,5 +1,5 @@
 <script>
-    import { Fancybox } from "@fancyapps/ui";
+    import Fancybox from "@fancyapps/ui";
     import { format } from "$lib/utils/util-date.js";
 
     export let data;

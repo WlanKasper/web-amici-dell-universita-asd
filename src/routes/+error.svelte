@@ -4,7 +4,7 @@
 
 <section class="container">
     <h1 class="text text-heading text-accent">
-        Opsss, qualcosa si e rotto 😅
+        Opsss, qualcosa si è rotto 😅
     </h1>
     <h2 class="text text-heading">{$page.error.message}</h2>
 </section>

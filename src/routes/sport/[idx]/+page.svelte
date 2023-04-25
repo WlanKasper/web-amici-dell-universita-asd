@@ -1,5 +1,5 @@
 <script>
-    import { Fancybox } from "@fancyapps/ui";
+    import Fancybox from "@fancyapps/ui";
     import NewsPreview from "$lib/components/NewsPreview.svelte";
 
     export let data;
