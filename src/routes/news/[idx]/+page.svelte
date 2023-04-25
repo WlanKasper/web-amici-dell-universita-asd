@@ -1,6 +1,7 @@
 <script>
-    import Fancybox from "@fancyapps/ui";
+    import * as pkg from "@fancyapps/ui";
     import { format } from "$lib/utils/util-date.js";
+    const { Fancybox } = pkg;
 
     export let data;
 

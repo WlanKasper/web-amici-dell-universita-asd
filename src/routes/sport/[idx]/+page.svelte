@@ -1,6 +1,7 @@
 <script>
-    import Fancybox from "@fancyapps/ui";
+    import * as pkg from "@fancyapps/ui";
     import NewsPreview from "$lib/components/NewsPreview.svelte";
+    const { Fancybox } = pkg;
 
     export let data;
 
@@ -106,7 +107,6 @@
 </section>
 
 <style>
-
     div.heading {
         height: 40vh;
 
