@@ -2,7 +2,7 @@
     import { addEllipsis } from "$lib/utils/util-text.js";
 
     export let title;
-    export let text;
+    export let text = undefined;
     export let href;
     export let imgURL;
 

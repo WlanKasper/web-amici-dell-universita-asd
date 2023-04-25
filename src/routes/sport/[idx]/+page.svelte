@@ -1,38 +1,42 @@
 <script>
-    import { Fancybox } from "@fancyapps/ui";
+    import { Fancybox }from "@fancyapps/ui";
     import NewsPreview from "$lib/components/NewsPreview.svelte";
+    import { onMount } from "svelte";
 
     export let data;
 
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        dragToClose: false,
-        preload: 3,
-        Toolbar: {
-            display: ["download", { id: "clouse", position: "top" }],
-        },
-        closeButton: "top",
-        download: true,
-        Image: {
-            zoom: false,
-        },
-        on: {
-            initCarousel: (fancybox) => {
-                const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
-
-                fancybox.$container.style.setProperty(
-                    "--bg-image",
-                    `url("${slide.$thumb.src}")`
-                );
+    onMount(() => {
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            dragToClose: false,
+            preload: 3,
+            Toolbar: {
+                display: ["download", { id: "clouse", position: "top" }],
             },
-            "Carousel.change": (fancybox, carousel, to, from) => {
-                const slide = carousel.slides[to];
-
-                fancybox.$container.style.setProperty(
-                    "--bg-image",
-                    `url("${slide.$thumb.src}")`
-                );
+            closeButton: "top",
+            download: true,
+            Image: {
+                zoom: false,
             },
-        },
+            on: {
+                initCarousel: (fancybox) => {
+                    const slide =
+                        fancybox.Carousel.slides[fancybox.Carousel.page];
+
+                    fancybox.$container.style.setProperty(
+                        "--bg-image",
+                        `url("${slide.$thumb.src}")`
+                    );
+                },
+                "Carousel.change": (fancybox, carousel, to, from) => {
+                    const slide = carousel.slides[to];
+
+                    fancybox.$container.style.setProperty(
+                        "--bg-image",
+                        `url("${slide.$thumb.src}")`
+                    );
+                },
+            },
+        });
     });
 
     const props = {
@@ -106,7 +110,6 @@
 </section>
 
 <style>
-
     div.heading {
         height: 40vh;
 
