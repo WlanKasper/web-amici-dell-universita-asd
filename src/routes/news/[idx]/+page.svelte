@@ -2,6 +2,7 @@
     import { Fancybox } from "@fancyapps/ui";
     import { format } from "$lib/utils/util-date.js";
     import { onMount } from "svelte";
+    import { element } from "svelte/internal";
 
     export let data;
 
@@ -67,9 +68,36 @@
     </div>
     <div class="assets">
         {#each props.assets as asset}
-            <a data-fancybox="gallery" href={asset.url}>
-                <img class="asset" src={asset.url} alt={asset.title} />
-            </a>
+            {#if asset.url.includes(".pdf")}
+                <object
+                    title={asset.title}
+                    data={asset.url}
+                    type="application/pdf"
+                    width="100%"
+                    height="500px"
+                >
+                    <h4 class="text">
+                        Unable to display PDF file. <a href={asset.url}
+                            >Download</a
+                        > instead.
+                    </h4>
+                </object>
+            {:else if asset.url.includes("https://videos.")}
+                <a data-fancybox="gallery" href={asset.url}>
+                    <video class="asset" width="320" height="240">
+                        <source src={asset.url} />
+                    </video>
+                    <img
+                        class="asset hidden"
+                        src={asset.url}
+                        alt={asset.title}
+                    />
+                </a>
+            {:else}
+                <a data-fancybox="gallery" href={asset.url}>
+                    <img class="asset" src={asset.url} alt={asset.title} />
+                </a>
+            {/if}
         {/each}
     </div>
 </section>
@@ -141,13 +169,13 @@
         gap: 1rem;
     }
 
-    img.asset {
+    .asset {
         border-radius: 4px;
         height: 20vh;
     }
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
-        img.asset {
+        .asset {
             height: 15vh;
         }
     }
