@@ -75,12 +75,12 @@
     }
 
     img.logo-fav {
-        height: 62px;
+        height: 74px;
     }
 
     @media screen and (min-width: 100px) and (max-width: 1140px) {
         img.logo-fav {
-            height: 42px;
+            height: 52px;
         }
     }
 </style>
