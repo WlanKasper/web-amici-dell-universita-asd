@@ -29,7 +29,7 @@
 
 <style>
     div.container {
-        height: 40rem;
+        height: 25rem;
 
         display: flex;
         align-items: flex-end;

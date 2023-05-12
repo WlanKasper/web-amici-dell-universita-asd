@@ -5,8 +5,8 @@
     export let data;
 
     const sportPreview = {
-        heading: data.sportSection.slice(0, 4),
-        all: data.sportSection.slice(4),
+        heading: data.sportSection.slice(0, 6),
+        all: data.sportSection.slice(6),
     };
 
     const newsPreview = {
@@ -50,7 +50,7 @@
             />
         {/each}
     </section>
-    <section class="sport-preview sport-preview-extend">
+    <section class="sport-preview {sportPreview.all.length === 2 ? 'sport-preview-extend-2' : sportPreview.all.length === 1 ? 'sport-preview-extend-1' : 'sport-preview-extend-3'}">
         {#each sportPreview.all as sport}
             <SportPreview
                 title={sport.title}
@@ -97,7 +97,7 @@
 
     section.sport-preview {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 0.5rem;
     }
 
@@ -109,7 +109,13 @@
         }
     }
 
-    section.sport-preview-extend {
+    section.sport-preview-extend-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    section.sport-preview-extend-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    section.sport-preview-extend-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
