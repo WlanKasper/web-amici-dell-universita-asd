@@ -22,12 +22,16 @@ const contentfulJsonToHtmlText = (json) => {
         (html, content) => {
             switch (content.nodeType) {
                 case "heading-1":
+                    return (
+                        html +
+                        `<h2 class="text-heading text-accent" style="margin: 5vh 0 2vh 0;">${content.content[0].value}</h2>`
+                    );
                 case "heading-2":
                 case "heading-3":
                 case "heading-4":
                     return (
                         html +
-                        `<h2 class="text text-heading">${content.content[0].value}</h2>`
+                        `<h2 class="text text-heading" style="margin: 2vh 0 1vh 0;">${content.content[0].value}</h2>`
                     );
                 case "paragraph":
                     return (
