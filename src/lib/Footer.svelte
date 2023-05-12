@@ -48,7 +48,6 @@
 
 <style>
     footer {
-        width: 80vw;
         height: 160px;
 
         display: flex;
