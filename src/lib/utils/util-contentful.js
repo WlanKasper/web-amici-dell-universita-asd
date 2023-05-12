@@ -72,6 +72,7 @@ const queryList = {
             sys {
               id
             }
+            position
             title
             description {
               json
